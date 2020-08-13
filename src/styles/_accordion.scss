@@ -1,0 +1,58 @@
+.accordion{
+    margin-bottom: 25px;
+    @media screen and (min-width: 800px){
+        margin-bottom: 35px;
+    }
+
+
+    &__link{
+        position: relative;
+        display: block;
+        padding: 15px 10px;
+        padding-right: 65px;
+        border: none !important;
+
+        &:after{
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-image: url("data:image/svg+xml,%3Csvg width='7' height='5' viewBox='0 0 7 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L3.5 3.5L6 1' stroke='%23e0b152'/%3E%3C/svg%3E%0A");
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        &:hover, 
+        &:focus{
+            background: transparentize($light, 0.8);
+            outline: none;
+        }
+        &[aria-current='page']{
+            margin-bottom: 25px;
+            background: $light;
+            color: $dark;
+            &:after{
+                background-image: url("data:image/svg+xml,%3Csvg width='7' height='4' viewBox='0 0 7 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 3.5L3.5 1L1 3.5' stroke='%23110d03'/%3E%3C/svg%3E%0A");
+            }
+        }
+
+        h2{
+            margin: 0;
+        }
+
+        p{
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+    }
+
+    article{
+        margin-bottom: 35px;
+    }
+
+}

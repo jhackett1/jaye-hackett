@@ -1,0 +1,33 @@
+.intro{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__name{
+    font-size: 3.5rem;
+    line-height: 1;
+    font-family: "Bulky";
+    margin-top: 0px;
+    margin-bottom: 0px;
+    @media screen and (min-width: 700px){
+      font-size: 5rem;
+    }
+    @media screen and (min-width: 1000px){
+      font-size: 7rem;
+    }
+  }
+  
+  &__social-links{
+    span, a{
+      margin-right: 10px;
+      display: inline-block;
+    }
+  }
+
+  p{
+    margin: 15px;
+  }
+}

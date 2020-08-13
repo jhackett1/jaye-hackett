@@ -1,0 +1,94 @@
+.interface{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    border: 4px solid $light;
+    @media screen and (min-width: 800px){
+        height: calc(100vh - 50px);
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: 800px){
+            width: 330px;
+            border-right: 4px solid $light;
+            a{
+                flex: 1;
+                padding: 25px;
+                font-size: 120%;
+                &:last-of-type{
+                    border-bottom: none;
+                }
+            }
+        }
+
+        a{
+            padding: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $light;
+            word-wrap: break-letter;
+            text-decoration: none;
+            border-bottom: 4px solid $light;
+            &:hover, 
+            &:focus{
+                background: transparentize($light, 0.8);
+                outline: none;
+            }
+            &[aria-current=page]{
+                background: $light;
+                color: $dark;
+                outline: none;
+            }
+        }
+    }
+
+    &__content{
+        padding: 25px;
+        @media screen and (min-width: 800px){
+            overflow-y: scroll;
+            flex: 1;
+            padding: 35px;
+        }
+        *:first-child{
+            margin-top: 0px;
+        }
+
+
+        // more generic styles for user-supplied content
+
+        h2, h3, h4, h5{
+            margin-top: 45px;
+            margin-bottom: 15px;
+        }
+
+        p{
+            margin: 20px 0px;
+        }
+
+        a{
+            color:$light;
+            text-decoration: none;
+            border-bottom: 4px solid $light;
+            &:hover{
+                border-bottom: none;
+            }
+        }
+
+
+        ul{
+            list-style: none;
+            li{
+                margin-bottom: 10px;
+                &:before{
+                    content: "—";
+                    text-indent: -1.7em;
+                    display: inline-block;
+                  }
+            }
+        }
+    }
+}
