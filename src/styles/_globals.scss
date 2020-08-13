@@ -1,7 +1,5 @@
-
 *{
     box-sizing: border-box;
-    // font-family: "VP Pixel";
     font-family: "Unibody";
     &:focus{
         outline: 4px dashed $light;
@@ -12,21 +10,7 @@
     }
 }
 
-@keyframes warmup{
-    from{
-        transform: scale(20, 0.1);
-        opacity: 0;
-        filter: brightness(2)
-    }
-    to{
-        transform: scale(1, 1);
-        opacity: 1;
-        filter: brightness(1)
-    }
-}
-
 html{
-    animation: warmup 0.5s;
     position: relative;
 
     // scanlines
@@ -73,8 +57,11 @@ body{
     text-shadow: 0px 0px 10px transparentize($light, 0.7);
     color: $light;
     font-family: "VP Pixel";
-    font-size: 130%;
-    padding: 20px;
+    padding: 15px;
+    @media screen and (min-width: 800px){
+        padding: 20px;
+        font-size: 130%;
+    }
 }
 
 p{
@@ -84,15 +71,12 @@ p{
 
 figure{
     margin: 25px 0px;
-
     .gatsby-resp-image-wrapper{
         max-width: none !important;
     }
-
     img{
         filter: grayscale(1) sepia(1);
     }
-
     figcaption{
         margin-top: 5px;
         font-size: 0.9rem;
