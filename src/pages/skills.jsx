@@ -14,7 +14,7 @@ const SkillsPage = () =>
     <p>At the moment I work mainly with React, Node and Rails, but I’m open to learning any and all new tech.</p>
 
     <h2>Agile delivery</h2>
-    <p>I’ve lead small and large agile teams, and I’m an experienced scrum facilitator.</p>
+    <p>I’ve led small and large agile teams, and I’m an experienced scrum facilitator.</p>
 
   </Layout>
 
